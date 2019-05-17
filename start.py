@@ -35,6 +35,8 @@ def main():
 	dogetip()
 	p = subprocess.Popen('python main.py',shell=True)
 	p.wait()
+	os.system('systemctl stop firewalld.service')
+	os.system('systemctl disable firewalld.service')
 
 if __name__ == '__main__':
 	main()
