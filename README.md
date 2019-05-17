@@ -43,6 +43,23 @@ python main.py
     you can run shadowsocksR-widows or shadowsocksR-android
     but you'd copy the config information to local
     
+    
+### example
+
+    1. yum install python
+    2. yum install git
+    3. git clone https://github.com/hXoreyer/autossr.git
+    4. cd autossr
+    5. python start.py
+    #then you should config your user
+    7. python main.py
+    #start the server
+    #copy the ssr link and paste to your ssr-android or ssr-windows
+    #have fun
+    
+    notic: these numbers are the shell of linux.
+    	   Behind # are what you should do.
+    
 ### how to download ssr?
 
 |#|Types|Links|
