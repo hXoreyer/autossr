@@ -15,7 +15,7 @@ def writeconfig():
 	p=subprocess.Popen('''cd shadowsocksr && sed -i "s/API_INTERFACE = 'sspanelv2'/API_INTERFACE = 'mudbjson'/" userapiconfig.py''',shell=True)
 	p.wait()
 def dogetip():
-	p = subprocess.Popen('cp getip.py shadowsocksr getip.py',shell=True)
+	p = subprocess.Popen('cp getip.py shadowsocksr/getip.py',shell=True)
 	p.wait()
 	p = subprocess.Popen('''cd shadowsocksr && sed -i "s/import base64/import base64\nimport getip/" mujson_mgr.py''',shell=True)
 	p.wait()
