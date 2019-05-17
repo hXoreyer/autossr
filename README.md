@@ -10,8 +10,8 @@ README
 ## Usage mehod
 
     you need install python3.x
-    use 'bash start.sh' to install and start ssr
-    use 'python info.py' to view the config information
+    use 'python start.py' to install ssr
+    use 'python main.py' to enter the main interface
     run ssr locally
     
 
@@ -26,16 +26,16 @@ README
 yum install python
 ```
     
-### install and start ssr
+### install and config ssr
 
 ```Bash
-bash start.sh
+python start.py
 ```
     
-### view the config information
+### enter to the main interface
 
 ```Bash
-python info.py
+python main.py
 ```
     
 ### then what to do?
