@@ -17,9 +17,9 @@ def writeconfig():
 def dogetip():
 	p = subprocess.Popen('cp getip.py shadowsocksr/getip.py',shell=True)
 	p.wait()
-	p = subprocess.Popen('''cd shadowsocksr && sed -i "s/import base64/import base64\nimport getip/" mujson_mgr.py''',shell=True)
+	p = subprocess.Popen('''cd shadowsocksr && sed -i "s/import base64/import base64\\nimport getip/" mujson_mgr.py''',shell=True)
 	p.wait()
-	p = subprocess.Popen('''cd shadowsocksr && "s/self.server_addr = self.getipaddr()/self.server_addr = getip.getip()/" mujson_mgr.py''',shell=True)
+	p = subprocess.Popen('''cd shadowsocksr && sed -i "s/self.server_addr = self.getipaddr()/self.server_addr = getip.getip()/" mujson_mgr.py''',shell=True)
 	p.wait()
 def main():
 
