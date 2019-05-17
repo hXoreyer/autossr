@@ -11,7 +11,7 @@ README
 
     you need install python3.x
     use 'python start.py' to install ssr
-    use 'python main.py' to enter the main interface
+    use 'python main.py' to get into the main
     run ssr locally
     
 
@@ -32,7 +32,7 @@ yum install python
 python start.py
 ```
     
-### enter to the main interface
+### get into the main
 
 ```Bash
 python main.py
