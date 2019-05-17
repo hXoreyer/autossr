@@ -67,7 +67,7 @@ python main.py
     #have fun
     
     notic: these numbers are the shell of linux.
-    Behind # are what you should do.
+        behind # are what you should do.
     
 ### how to download ssr?
 
