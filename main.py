@@ -67,7 +67,9 @@ def main():
 	
 	7. 启动服务
 	8. 关闭服务
-	9. 查看日志''')
+	9. 查看日志
+
+	0. 关闭''')
 
 	print
 	print
@@ -115,6 +117,9 @@ def main():
 		exit(0)
 	elif select == '9':
 		viewlog()
+		print
+		exit(0)
+	elif select == '0':
 		print
 		exit(0)
 	else:
