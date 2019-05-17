@@ -32,15 +32,15 @@ def setzero(username):
 	p.wait()
 
 def runserver():
-	p = subprocess.Popen('cd shadowsocks && chmod +x *.sh && ./logrun.sh',shell=True)
+	p = subprocess.Popen('cd shadowsocksr && chmod +x *.sh && ./logrun.sh',shell=True)
 	p.wait()
 
 def stopserver():
-	p = subprocess.Popen('cd shadowsocks && chmod +x *.sh && ./stop.sh',shell=True)
+	p = subprocess.Popen('cd shadowsocksr && chmod +x *.sh && ./stop.sh',shell=True)
 	p.wait()
 
 def viewlog():
-	p = subprocess.Popen('cd shadowsocks && chmod +x *.sh && ./tail.sh',shell=True)
+	p = subprocess.Popen('cd shadowsocksr && chmod +x *.sh && ./tail.sh',shell=True)
 	p.wait()
 
 def main():
@@ -57,17 +57,17 @@ def main():
 ========================================''')
         print
         print
-        print('''	 1. 添加用户
-         2. 删除用户(端口)
-         3. 删除用户(用户名)
-         4. 查看用户信息
-         5. 查看所有用户信息
-         6. 用户使用流量清零
+        print('''	1. 添加用户
+        2. 删除用户(端口)
+        3. 删除用户(用户名)
+        4. 查看用户信息
+        5. 查看所有用户信息
+        6. 用户使用流量清零
 	
 	
-	 7. 启动服务
-	 8. 关闭服务
-	10. 查看日志''')
+	7. 启动服务
+	8. 关闭服务
+	9. 查看日志''')
 
 	print
 	print
