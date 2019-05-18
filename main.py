@@ -1,7 +1,7 @@
 #-*-coding:utf-8-*-
 import subprocess
 import os
-
+import shutil
 def adduser():
 	p=subprocess.Popen('python config.py',shell=True)
 	p.wait()
@@ -32,12 +32,17 @@ def setzero(username):
 	p.wait()
 
 def runserver():
-	p = subprocess.Popen('cd shadowsocksr && chmod +x *.sh && ./logrun.sh',shell=True)
+	if os.path.exists('/usr/lib/systemd/system/autossr.service') == True:
+		print('服务已经开启!')
+		exit(0)
+	p = subprocess.Popen('python chsv.py',shell=True)
 	p.wait()
 
 def stopserver():
-	p = subprocess.Popen('cd shadowsocksr && chmod +x *.sh && ./stop.sh',shell=True)
+	os.system('systemctl disable autossr.service')
+	p = subprocess.Popen('systemctl stop autossr.service',shell=True)
 	p.wait()
+	os.unlink('/usr/lib/systemd/system/autossr.service')
 
 def viewlog():
 	p = subprocess.Popen('cd shadowsocksr && chmod +x *.sh && ./tail.sh',shell=True)

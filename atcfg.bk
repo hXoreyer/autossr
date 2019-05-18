@@ -1,0 +1,10 @@
+[Unit]
+Description=autossr service
+After=network.service
+[Service]
+Type=forking
+ExecStart=run_path
+ExecReload=
+ExecStop=stop_path
+[Install]
+WantedBy=multi-user.target
