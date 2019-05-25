@@ -21,11 +21,11 @@ def formatinfo(user_name, port, method, passwd, protocol, protocol_param, obfs, 
     color_green  = '\033[1;32m'
     color_red = '\033[1;31m'
     color_end = '\033[0m'
-    infostr = '''//////////////////////////////
-    //////////          //////////
-    //////////  info    //////////
-    //////////          //////////
-    //////////////////////////////
+    infostr = '''===============================
+
+        信息查看
+
+===============================
 
 
     '''+ color_green+ '''用 户 名: '''+ color_end+ color_red+ user_name+ color_end+ '''
