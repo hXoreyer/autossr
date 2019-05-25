@@ -42,7 +42,7 @@ def formatinfo(user_name, port, method, passwd, protocol, protocol_param, obfs, 
 
     '''+ color_green+ '''混    肴: '''+ color_end+ color_red+ obfs+ color_end+ '''
 
-    '''+ color_green+ '''最大速度: '''+ color_end+ color_red+ transfer+ color_end+ '''
+    '''+ color_green+ '''最大流量: '''+ color_end+ color_red+ transfer+ color_end+ '''
 
     '''+ color_green+ '''上    传: '''+ color_end+ color_red+ up+ color_end+ '''
 
@@ -68,22 +68,23 @@ def getinfofromuser(name):
     protocol_param = str(user['protocol_param'])
     obfs = str(user['obfs'])
     transfer = user['transfer_enable']
-    transfer = str(transfer / (1024**3))
-    up = str(user['u'])
-    down = str(user['d'])
+    transfer = str(transfer / (1024**3)) + ' GB'
+    up = str(user['u'] / (1024**2)) + ' MB/s'
+    down = str(user['d'] / (1024**2)) + 'MB/s'
     link = getip.getip()
     con = None
     if 'speed_limit_per_con' in user:
         con = user['speed_limit_per_con']
+        con = str(con)+ ' KB/s'
     else:
         con = '无限速'
     usr = None
     if 'speed_limit_per_user' in user:
         usr = user['speed_limit_per_user']
+        usr = str(usr)+ ' KB/s'
     else:
         usr = '无限速'
-    con = str(con)+ ' KB/s'
-    usr = str(usr)+ ' KB/s'
+   
     ret = formatinfo(user_name, port, method, passwd, protocol, protocol_param, obfs, transfer, up, down, link, con, usr)
     if ret != False:
         print(ret)
