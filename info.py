@@ -73,7 +73,7 @@ def getinfofromuser(name):
     down = str(user['d'] / (1024**2)) + ' MB/s'
     ip = getip.getip()
     password_base64 = base64.b64encode(passwd)
-    link = ip[0] + ':' + str(info_dict['server_port']) + ':' + str(info_dict['protocol']) + ':' + str(info_dict['method']) + ':plain:'+ str(password_base64[0:-1]) + '/?' + 'obfsparam='
+    link = ip + ':' + port + ':' + protocol + ':' + method + ':plain:'+ str(password_base64[0:-1]) + '/?' + 'obfsparam='
     link = 'ssr://' + base64.b64encode(link)
     con = None
     if 'speed_limit_per_con' in user:
