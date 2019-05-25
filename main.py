@@ -2,6 +2,7 @@
 import subprocess
 import os
 import shutil
+import info
 def adduser():
 	p=subprocess.Popen('python config.py',shell=True)
 	p.wait()
@@ -17,9 +18,7 @@ def deleteuserbyusername(username):
 	p.wait()
 
 def viewinfo(username):
-	ss = 'cd shadowsocksr && python mujson_mgr.py ' + '-l -u ' + username
-	p = subprocess.Popen(ss,shell=True)
-	p.wait()
+	info.getinfofromuser(username)
 
 def viewallinfo():
 	ss = 'cd shadowsocksr && python mujson_mgr.py -l'
@@ -56,7 +55,7 @@ def main():
         print
         print
         print('''========================================
-              
+
           autossr 一键脚本
 
 ========================================''')
@@ -68,8 +67,8 @@ def main():
         4. 查看用户信息
         5. 查看所有用户信息
         6. 用户使用流量清零
-	
-	
+
+
 	7. 启动服务
 	8. 关闭服务
 	9. 查看日志
