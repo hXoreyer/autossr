@@ -84,5 +84,8 @@ def getinfofromuser(name):
         usr = '无限速'
     con = str(con)+ ' KB/s'
     usr = str(usr)+ ' KB/s'
-    formatinfo(user_name, port, method, passwd, protocol, protocol_param, obfs, transfer, up, down, link, con, usr)
-    return True
+    ret = formatinfo(user_name, port, method, passwd, protocol, protocol_param, obfs, transfer, up, down, link, con, usr)
+    if ret != False:
+        print(ret)
+        return True
+    return False
