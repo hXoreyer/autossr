@@ -13,8 +13,8 @@ def openjson():
 def getuserfromname(user_name):
     vjson = openjson()
     for value in vjson:
-        if value['user'] == user_name
-        return value
+        if value['user'] == user_name:
+            return value
     return False
 
 def formatinfo(user_name, port, method, passwd, protocol, protocol_param, obfs, transfer, up, down, link, con, usr):
