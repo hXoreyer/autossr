@@ -11,8 +11,8 @@ def openjson():
     return data
 
 def getuserfromname(user_name):
-    json = openjson()
-    for value in json:
+    vjson = openjson()
+    for value in vjson:
         if value['user'] == user_name
         return value
     return False
