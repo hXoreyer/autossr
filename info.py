@@ -13,7 +13,7 @@ def openjson():
 def getuserfromname(user_name):
     json = openjson()
     for value in json:
-        if value['name'] == user_name
+        if value['user'] == user_name
         return value
     return False
 
