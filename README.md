@@ -68,6 +68,63 @@ python main.py
     
     notic: these numbers are the shell of linux.
            behind # are what you should do.
+	   
+## 使用方法
+
+    需要先安装python
+    输入'python start.py'安装
+    输入'python main.py'进入主菜单
+    运行
+    
+
+
+
+## 具体方式
+
+    
+### 安装python
+
+```Bash
+yum install python
+```
+    
+### 安装初始化ssr
+
+```Bash
+python start.py
+```
+    
+### 进入主菜单
+
+```Bash
+python main.py
+```
+    
+### then what to do?
+
+    运行 shadowsocksR-widows 或者 shadowsocksR-android
+    
+    
+### 例子
+
+    1. yum install python
+    
+    2. yum install git
+    
+    3. git clone https://github.com/hXoreyer/autossr.git
+    
+    4. cd autossr
+    
+    5. python start.py
+    
+    #配置用户
+    
+    7. python main.py
+    
+    #开启服务器
+    
+    #复制ssr链接到客户端软件里
+    
     
 ### how to download ssr?
 
