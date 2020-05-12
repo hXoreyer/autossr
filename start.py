@@ -2,7 +2,7 @@
 import os
 import subprocess
 def download():
-	p=subprocess.Popen('git clone https://github.com/Ssrbackup/shadowsocksr.git',shell=True)
+	p=subprocess.Popen('git clone https://github.com/shadowsocksr-backup/shadowsocks-rss.git',shell=True)
 	p.wait()
 def init():
 	p=subprocess.Popen('cd shadowsocksr && chmod +x initcfg.sh && bash initcfg.sh',shell=True)
